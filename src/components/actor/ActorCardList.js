@@ -33,7 +33,7 @@ const ActorCardList = ({ item }) => {
                 ></img>
               ) : (
                 <img
-                  src="/avatar.png"
+                  src="./avatar.png"
                   onClick={() => navigate(`/actor/${id}`)}
                   className="object-cover w-full h-full"
                   alt=""

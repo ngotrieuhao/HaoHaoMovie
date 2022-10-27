@@ -56,7 +56,7 @@ const Header = () => {
           <NavLink end to="/">
             <img
               className="w-[70px] h-[70px]"
-              src="/logocinema.png"
+              src="./logocinema.png"
               alt="Logo-cinema"
             />
           </NavLink>
