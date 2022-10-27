@@ -16,7 +16,7 @@ const Footer = () => {
                   <Link end to="/">
                     <img
                       className="flex-1 flex-shrink-0 footer__logo"
-                      src="/logocinema.png"
+                      src="./logocinema.png"
                       alt="Footer Logo"
                     />
                   </Link>
