@@ -1,5 +1,5 @@
 import { Fragment, lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import "swiper/scss";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,38 +19,40 @@ const PageNotFound = lazy(() => import("./page/PageNotFound"));
 
 function App() {
   return (
-    <Fragment>
-      <AuthProvider>
-        <Suspense fallback={<></>}>
-          <Routes>
-            <Route element={<Main></Main>}>
-              <Route path="/" element={<HomePage></HomePage>}></Route>
-              <Route path="/movies" element={<MoviePage></MoviePage>}></Route>
-              <Route path="/tv" element={<TvPage></TvPage>}></Route>
-              <Route path="/actor" element={<ActorPage></ActorPage>}></Route>
-              <Route
-                path="/movie/:movieId"
-                element={<MovieDetailPage></MovieDetailPage>}
-              ></Route>
-              <Route
-                path="/tv/:tvId"
-                element={<TVDetailPage></TVDetailPage>}
-              ></Route>
-              <Route
-                path="/actor/:actorId"
-                element={<ActorDetailPage></ActorDetailPage>}
-              ></Route>
-              <Route path="/login" element={<LoginPage></LoginPage>}></Route>
-              <Route
-                path="/sign-up"
-                element={<SignUpPage></SignUpPage>}
-              ></Route>
-            </Route>
-            <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
-          </Routes>
-        </Suspense>
-      </AuthProvider>
-    </Fragment>
+    <Router basename="/HaoHaoMovie/">
+      <Fragment>
+        <AuthProvider>
+          <Suspense fallback={<></>}>
+            <Routes>
+              <Route element={<Main></Main>}>
+                <Route path="/" element={<HomePage></HomePage>}></Route>
+                <Route path="/movies" element={<MoviePage></MoviePage>}></Route>
+                <Route path="/tv" element={<TvPage></TvPage>}></Route>
+                <Route path="/actor" element={<ActorPage></ActorPage>}></Route>
+                <Route
+                  path="/movie/:movieId"
+                  element={<MovieDetailPage></MovieDetailPage>}
+                ></Route>
+                <Route
+                  path="/tv/:tvId"
+                  element={<TVDetailPage></TVDetailPage>}
+                ></Route>
+                <Route
+                  path="/actor/:actorId"
+                  element={<ActorDetailPage></ActorDetailPage>}
+                ></Route>
+                <Route path="/login" element={<LoginPage></LoginPage>}></Route>
+                <Route
+                  path="/sign-up"
+                  element={<SignUpPage></SignUpPage>}
+                ></Route>
+              </Route>
+              <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
+            </Routes>
+          </Suspense>
+        </AuthProvider>
+      </Fragment>
+    </Router>
   );
 }
 

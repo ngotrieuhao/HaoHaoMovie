@@ -8,7 +8,6 @@ import { ErrorComponent } from "hooks/ErrorComponent";
 
 const Header = () => {
   const { userInfo } = useAuth();
-  console.log("Header ~ userInfo", userInfo);
   const [navbar, setNavBar] = useState(false);
   const menuLinks = [
     {
