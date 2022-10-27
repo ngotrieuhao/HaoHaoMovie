@@ -6,17 +6,17 @@ import "./css/footer.scss";
 import "./css/list.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.Fragment>
-    <BrowserRouter>
+    <HashRouter>
       <App />
       <ToastContainer></ToastContainer>
-    </BrowserRouter>
+    </HashRouter>
   </React.Fragment>
 );
 
