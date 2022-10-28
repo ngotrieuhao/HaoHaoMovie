@@ -26,7 +26,7 @@ const Banner = () => {
         pagination={{
           dynamicBullets: true,
         }}
-        // autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 3000 }}
         modules={[Pagination, Autoplay]}
       >
         {movies.length > 0 &&
