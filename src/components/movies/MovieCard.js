@@ -18,7 +18,7 @@ const MovieCard = ({ item }) => {
           onClick={() => navigate(`/movie/${id}`)}
         />
       </div>
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 film__item--content">
         <h3
           className="mt-3 mb-3 text-xl font-bold cursor-pointer hover:underline movie-card--title"
           onClick={() => navigate(`/movie/${id}`)}
@@ -29,7 +29,7 @@ const MovieCard = ({ item }) => {
           <div className="opacity-50">
             <span>{new Date(release_date).getFullYear()}</span>
           </div>
-          <div className="flex items-center gap-x-2">
+          <div className="flex items-center gap-x-2 film__content-right">
             <span className="opacity-50">
               {parseFloat(vote_average).toFixed(1)}
             </span>

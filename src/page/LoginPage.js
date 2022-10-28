@@ -56,6 +56,7 @@ const LoginPage = () => {
   const handleSignIn = async (values) => {
     if (!isValid) return;
     await signInWithEmailAndPassword(auth, values.email, values.password);
+    toast.success("Login successfully!");
     navigate("/");
   };
 

@@ -177,7 +177,7 @@ export function TVMeta({ type = "videos" }) {
                       src={
                         item.profile_path
                           ? tmdbAPI.imageOriginal(item.profile_path)
-                          : "/avatar.png"
+                          : "./avatar.png"
                       }
                       alt=""
                       className="w-full max-w-[250px] h-[250px] object-cover rounded-lg mb-3 select-none"

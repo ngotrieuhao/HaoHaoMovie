@@ -39,29 +39,23 @@ const SignUpPage = () => {
 
   const handleSignUp = async (values) => {
     if (!isValid) return;
-    console.log("handleSignUp ~ values", values);
     const user = await createUserWithEmailAndPassword(
       auth,
       values.email,
       values.password
     );
 
-    await updateProfile(auth.currentUser, {
-      displayName: values.fullname,
-    });
+    // await updateProfile(auth.currentUser, {
+    //   displayName: values.fullname,
+    // });
     const colRef = collection(db, "users");
     await addDoc(colRef, {
       fullname: values.fullname,
       email: values.email,
       password: values.password,
     });
-    // return new Promise((resolve) => {
-    //   setTimeout(() => {
-    //     resolve();
-    //   }, 3000);
-    // });
     toast.success("Register successfully");
-    navigate("/");
+    navigate("/login");
   };
 
   useEffect(() => {
