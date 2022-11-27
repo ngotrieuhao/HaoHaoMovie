@@ -34,7 +34,6 @@ const ActorPage = () => {
     setFilter(e.target.value);
   };
   const { data, error } = useSWR(url, fetcher);
-  // console.log("ActorPage ~ data", data);
   const loading = !data && !error;
   useEffect(() => {
     if (filterDebounce) {

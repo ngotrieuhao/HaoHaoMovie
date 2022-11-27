@@ -12,7 +12,6 @@ import Zoom from "react-reveal/Zoom";
 const ActorDetailPage = () => {
   const { actorId } = useParams();
   const { data } = useSWR(tmdbAPI.getActorDetails(actorId), fetcher);
-  console.log("ActorDetailPage ~ data", data);
 
   /**Scroll To Top */
   useEffect(() => {

@@ -16,7 +16,6 @@ const TvCardList = ({ item }) => {
     );
   }, []);
   const { name, poster_path, vote_average, id } = item;
-  console.log("TvCardList ~ item", item);
   const navigate = useNavigate();
 
   return (

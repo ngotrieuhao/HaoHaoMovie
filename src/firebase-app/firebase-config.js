@@ -1,10 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDoc, getFirestore } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDuau7-FWz9tERBMBHJtQ1IRQj2nkrxzBI",
+  apiKey: `${process.env.FIREBASE_API_KEY}`,
   authDomain: "haohaocinema.firebaseapp.com",
   projectId: "haohaocinema",
   storageBucket: "haohaocinema.appspot.com",

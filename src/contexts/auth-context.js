@@ -13,7 +13,6 @@ function AuthProvider(props) {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user);
       setUserInfo(user);
     });
   });

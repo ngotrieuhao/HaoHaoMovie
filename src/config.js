@@ -1,5 +1,5 @@
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
-export const api_key = "f3d7dbc9ec21108ebeebed1db9080612";
+export const api_key = `${process.env.REACT_APP_API_KEY}`;
 const tmbEndPoint3 = "https://api.themoviedb.org/3";
 const tmbEndPoint = "https://api.themoviedb.org/3/movie";
 const tmbEndPointSearch = "https://api.themoviedb.org/3/search/movie";

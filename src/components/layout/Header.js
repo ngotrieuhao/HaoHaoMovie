@@ -105,7 +105,7 @@ const Header = () => {
             </div>
           )}
         </div>
-        <label className="navbar-btn" for="navbar__mobile--input">
+        <label className="navbar-btn" htmlFor="navbar__mobile--input">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -127,12 +127,12 @@ const Header = () => {
           id="navbar__mobile--input"
           className="nav__input"
         />
-        <label for="navbar__mobile--input" className="nav__overlay"></label>
+        <label htmlFor="navbar__mobile--input" className="nav__overlay"></label>
 
         <div className="navbar__mobile">
           <label
             className="cursor-pointer navbar__mobile--close"
-            for="navbar__mobile--input"
+            htmlFor="navbar__mobile--input"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ const Header = () => {
               />
             </svg>
           </label>
-          <span class="nav__mobile--span"></span>
+          <span className="nav__mobile--span"></span>
           <div className="navbar__mobile--list">
             {menuLinks.map((item) => (
               <NavLink
@@ -166,7 +166,7 @@ const Header = () => {
           </div>
           {!userInfo ? (
             <>
-              <span class="nav__mobile--span"></span>
+              <span className="nav__mobile--span"></span>
 
               <div className="navbar__mobile--right">
                 <NavLink
@@ -191,7 +191,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              <span class="nav__mobile--span"></span>
+              <span className="nav__mobile--span"></span>
 
               <div className="navbar__mobile--auth">
                 <div>
