@@ -1,4 +1,4 @@
-import { Fragment, lazy, Suspense } from "react";
+import { Fragment, lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "swiper/scss";
 import "swiper/css/navigation";

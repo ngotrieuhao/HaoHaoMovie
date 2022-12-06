@@ -5,7 +5,6 @@ import { tmdbAPI } from "config";
 import useDebounce from "hooks/useDebounce";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import { useNavigate } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import useSWR from "swr";
 import { v4 } from "uuid";
@@ -28,8 +27,6 @@ const TvPage = () => {
   const [filter, setFilter] = useState("");
   const [url, setUrl] = useState(tmdbAPI.getTVList("top_rated", nextPage));
   const filterDebounce = useDebounce(filter, 500);
-
-  const navigate = useNavigate();
 
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
