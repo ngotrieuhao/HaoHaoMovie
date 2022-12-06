@@ -95,28 +95,7 @@ const LoginPage = () => {
                 </ButtonSubmit>
               </div>
             </form>
-            <div className="form__login--forget">
-              {/* <a href="#" className="link--forget">
-              Forget Password?
-            </a> */}
-            </div>
-            {/* <div className="text--continute">or Continute with</div>
-          <div className="another__login">
-            <div className="another__login--facebook">
-              <img
-                src="./images/facebook-icon.png"
-                alt=""
-                className="another__login--icon1"
-              />
-            </div>
-            <div className="another__login--google">
-              <img
-                src="./images/google-icon.png"
-                alt=""
-                className="another__login--icon2"
-              />
-            </div>
-          </div> */}
+
             <div className="no__login">
               <span> Don't have Account?</span>
 
