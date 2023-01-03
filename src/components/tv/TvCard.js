@@ -27,7 +27,7 @@ const TvCard = ({ item }) => {
       </div>
       <div className="flex flex-col flex-1">
         <h3
-          className="mt-3 mb-3 text-xl font-bold cursor-pointer hover:underline"
+          className="mt-3 mb-3 text-xl font-bold cursor-pointer movie__lists--title hover:underline"
           onClick={() => navigate(`/tv/${id}`)}
         >
           {original_name}

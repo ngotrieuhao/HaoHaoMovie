@@ -20,7 +20,7 @@ const MovieCard = ({ item }) => {
       </div>
       <div className="flex flex-col flex-1 film__item--content">
         <h3
-          className="mt-3 mb-3 text-xl font-bold cursor-pointer hover:underline movie-card--title"
+          className="mt-3 mb-3 text-xl font-bold cursor-pointer movie__lists--title hover:underline movie-card--title"
           onClick={() => navigate(`/movie/${id}`)}
         >
           {title}

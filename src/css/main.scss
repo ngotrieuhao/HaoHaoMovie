@@ -46,16 +46,6 @@ header {
   background-color: rgb(38 44 48 / 60%);
   background-image: linear-gradient(180deg, rgb(12 39 56 / 10%) 64%, #081b27);
 }
-// .active-link::after {
-//   content: "";
-//   position: absolute;
-//   width: 6px;
-//   height: 6px;
-//   transform: translate(-25px, 30px);
-//   margin-inline: auto;
-//   border-radius: 100rem;
-//   background-color: #f62682;
-// }
 .overview-banner {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -85,14 +75,33 @@ header {
   background: url("~/public/slider.jpg") 100%;
   background-position: center;
 }
-.swiper-button-prev {
-  color: white !important;
-  left: 20px !important;
+.swipper__lists {
+  .swiper-button-prev {
+    color: white !important;
+    opacity: 0 !important;
+  }
+  .swiper-button-next {
+    color: white !important;
+    opacity: 0 !important;
+  }
+  &:hover > .swiper-button-prev,
+  &:hover > .swiper-button-next {
+    transition: all 0.2s linear;
+    top: 0% !important;
+    opacity: 1 !important;
+    display: flex !important;
+    background: linear-gradient(270deg, rgba(17, 18, 18, 0.7) 30%, rgba(17, 18, 18, 0));
+    height: 550px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover > .swiper-button-prev::after,
+  &:hover > .swiper-button-next::after {
+    animation: bigger 0.5s linear;
+  }
 }
-.swiper-button-next {
-  color: white !important;
-  right: 20px !important;
-}
+
 span.swiper-pagination-bullet.swiper-pagination-bullet-active-next,
 span.swiper-pagination-bullet {
   opacity: 0.8;
@@ -118,7 +127,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
     height: 40px;
     background: linear-gradient(180deg, #f80d0d, #f77903);
     border-radius: 1rem;
-    left: 110px;
+    left: 20px;
   }
 }
 
@@ -623,6 +632,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
         }
       }
     }
+
     .swiper-pagination.swiper-pagination-bullets-dynamic.swiper-pagination-bullets.swiper-pagination-horizontal {
       bottom: 60px;
 
@@ -694,6 +704,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
           height: 20px;
         }
       }
+    }
+  }
+
+  /* Swiper */
+  .swipper__lists {
+    &:hover > .swiper-button-prev,
+    &:hover > .swiper-button-next {
+      opacity: 0 !important;
     }
   }
 
@@ -987,6 +1005,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
     }
   }
 
+  /* Swiper */
+  .swipper__lists {
+    &:hover > .swiper-button-prev,
+    &:hover > .swiper-button-next {
+      opacity: 0 !important;
+    }
+  }
+
   /* List film movie */
   .wrapp-list--page {
     .wrapp-search {
@@ -1050,5 +1076,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes bigger {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 40px;
   }
 }

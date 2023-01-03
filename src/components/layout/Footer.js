@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
 import { withErrorBoundary } from "react-error-boundary";
 import { ErrorComponent } from "hooks/ErrorComponent";
+import { useRef } from "react";
 
 const Footer = () => {
   return (
@@ -132,6 +133,12 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="footer__bottom">
+          <p>
+            Copyright &copy; {new Date().getFullYear()}{" "}
+            <span>@ ngotrieuhao</span>
+          </p>
         </div>
       </footer>
     </div>
