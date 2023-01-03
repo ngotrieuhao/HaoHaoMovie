@@ -75,7 +75,7 @@ const SignUpPage = () => {
       <div className=" py-28">
         <Zoom>
           <div className="wrapp-form__register">
-            <h1 className="form__login--title">Register</h1>
+            <h1 className="form__register--title">Register</h1>
             <form className="mt-10" onSubmit={handleSubmit(handleSignUp)}>
               <Field>
                 <Label htmlFor="fullname">Fullname</Label>
