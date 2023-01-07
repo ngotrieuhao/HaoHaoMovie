@@ -355,6 +355,15 @@
             }
         }
     }
+    /* Actor Detail */
+    .actor-background {
+        .actor__film--content {
+            margin-left: 0;
+            .actor__film--title {
+                font-size: 60px;
+            }
+        }
+    }
 }
 
 /* Responsive Tablet */

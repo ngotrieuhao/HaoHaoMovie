@@ -87,7 +87,7 @@ const HomePage = () => {
       <section className="pb-20 movies-layout page-container">
         <div className="flex items-center justify-between max-w-full mr-4 page-container--title">
           <h2 className="mb-5 text-3xl font-bold text-white capitalize lists__film--head">
-            TV Show Popular
+            TV Popular
           </h2>
           <Button
             bgColor="slate"
@@ -107,7 +107,7 @@ const HomePage = () => {
       <section className="pb-20 movies-layout page-container">
         <div className="flex items-center justify-between max-w-full mr-4 page-container--title">
           <h2 className="mb-5 text-3xl font-bold text-white capitalize lists__film--head">
-            TV Show Top Rated
+            TV Top Rated
           </h2>
           <Button
             bgColor="slate"
