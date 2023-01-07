@@ -29,9 +29,9 @@ const Footer = () => {
               </div>
 
               <p>
-                5th Avenue st, manhattan
+                142 Pham Phu Thu, District 6
                 <br />
-                New York, NY 10001
+                Ho Chi Minh City
               </p>
               <p
                 style={{
